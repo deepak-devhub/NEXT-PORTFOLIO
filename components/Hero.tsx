@@ -39,17 +39,19 @@ export default function Hero() {
       >
         {/* Main headline */}
         <motion.div variants={itemVariants}>
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif font-bold leading-tight tracking-tight text-foreground mb-6">
-            Crafting Digital
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold leading-relaxed tracking-tight text-foreground">
+            Deepak VK
             <br />
-            Experiences.
+            <span className="text-accent-primary">Full Stack Developer</span>
           </h1>
         </motion.div>
 
-        <motion.div variants={itemVariants}>
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif font-bold leading-tight tracking-tight text-accent-primary">
+        <motion.div variants={itemVariants} className="-mt-4">
+          <h5 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-relaxed tracking-tight text-accent-primary">
+            Crafting Digital Experiences.
+            <br />
             Full Stack Built.
-          </h1>
+          </h5>
         </motion.div>
 
         {/* Subheading */}
