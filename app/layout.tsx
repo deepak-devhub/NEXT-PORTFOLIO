@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deepakvk.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deepakdevhub.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -138,10 +138,12 @@ export default function RootLayout({
               ],
               email: "deepakvk6334@gmail.com",
               telephone: "+91-XXXXXXXXXX",
-              location: {
-                "@type": "Place",
-                name: "Koduvally, India",
-              },
+              address: {
+                        "@type": "PostalAddress",
+                        addressLocality: "Kozhikode",
+                        addressRegion: "Kerala",
+                        addressCountry: "India"
+                        },
             }),
           }}
         />
