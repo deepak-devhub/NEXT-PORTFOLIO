@@ -4,16 +4,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setCursorPos({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,16 +31,6 @@ export default function Hero() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-8">
-      {/* Custom cursor circle */}
-      <motion.div
-        className="fixed w-10 h-10 border border-accent-primary rounded-full pointer-events-none mix-blend-screen"
-        animate={{
-          x: cursorPos.x - 20,
-          y: cursorPos.y - 20,
-        }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      />
-
       <motion.div
         className="max-w-5xl w-full text-center"
         variants={containerVariants}
