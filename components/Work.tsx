@@ -28,8 +28,8 @@ const projects: Project[] = [
       "Full-featured hospital management system built with Django backend and responsive frontend. Enables efficient doctor and patient management, appointment scheduling, and medical records tracking. Provides seamless coordination between hospital staff and patients with an intuitive user interface.",
     tags: ["Django", "Python", "MySQL", "HTML5", "CSS3", "JavaScript"],
     image: "hospital-system",
-    link: "https://github.com/deepak6235",
-    github: "https://github.com/deepak6235",
+    link: "https://github.com/deepak-devhub/caresync-web.git",
+    github: "https://github.com/deepak-devhub",
     metrics: [
       { label: "Appointments/Day", value: "200+" },
       { label: "Patient Records", value: "1K+" },
