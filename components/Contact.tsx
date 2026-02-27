@@ -108,7 +108,9 @@ export default function Contact() {
         {/* Email CTA */}
         <motion.div variants={itemVariants} className="mb-20">
           <a
-            href="mailto:deepakvk6334@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakvk6334@gmail.com&su=Let%27s%20Work%20Together&body=Hi%20Deepak%2C%0A%0AI%27m%20reaching%20out%20because%20I%27m%20interested%20in%20discussing%20a%20project%20opportunity%20with%20you.%0A%0APlease%20tell%20me%20more%20about%20your%20availability%20and%20how%20we%20can%20collaborate.%0A%0ALooking%20forward%20to%20hearing%20from%20you%21%0A%0ABest%20regards"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 sm:px-12 py-4 bg-accent-primary text-background hover:opacity-80 transition-all duration-300 text-sm sm:text-base font-mono uppercase tracking-wider hover:scale-105"
           >
             Get In Touch
@@ -156,7 +158,7 @@ export default function Contact() {
         {/* Footer */}
         <motion.div variants={itemVariants} className="mt-20 pt-8 border-t border-border-ghost">
           <p className="text-xs font-mono text-foreground/40 uppercase tracking-widest">
-            © 2025. Architecting intelligence, building scale.
+            © {new Date().getFullYear()}. Architecting intelligence, building scale.
           </p>
         </motion.div>
       </motion.div>

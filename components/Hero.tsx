@@ -69,7 +69,9 @@ export default function Hero() {
             View Work
           </a>
           <a
-            href="#contact"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakvk6334@gmail.com&su=Let%27s%20Work%20Together&body=Hi%20Deepak%2C%0A%0AI%27m%20reaching%20out%20because%20I%27m%20interested%20in%20discussing%20a%20project%20opportunity%20with%20you.%0A%0APlease%20tell%20me%20more%20about%20your%20availability%20and%20how%20we%20can%20collaborate.%0A%0ALooking%20forward%20to%20hearing%20from%20you%21%0A%0ABest%20regards"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3 bg-accent-primary text-background hover:opacity-80 transition-all duration-300 text-sm font-mono uppercase tracking-wider"
           >
             Get in Touch
