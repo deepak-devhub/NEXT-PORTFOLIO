@@ -1,0 +1,113 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+export default function Hero() {
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursorPos({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      },
+    },
+  };
+
+  return (
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-8">
+      {/* Custom cursor circle */}
+      <motion.div
+        className="fixed w-10 h-10 border border-accent-primary rounded-full pointer-events-none mix-blend-screen"
+        animate={{
+          x: cursorPos.x - 20,
+          y: cursorPos.y - 20,
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      />
+
+      <motion.div
+        className="max-w-5xl w-full text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Main headline */}
+        <motion.div variants={itemVariants}>
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif font-bold leading-tight tracking-tight text-foreground mb-6">
+            Crafting Digital
+            <br />
+            Experiences.
+          </h1>
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif font-bold leading-tight tracking-tight text-accent-primary">
+            Full Stack Built.
+          </h1>
+        </motion.div>
+
+        {/* Subheading */}
+        <motion.p
+          variants={itemVariants}
+          className="text-xs sm:text-sm font-mono text-foreground/60 mt-12 mb-8 tracking-widest uppercase"
+        >
+          Full-Stack Developer | React & Node.js Expert | UI/UX Enthusiast
+        </motion.p>
+
+        {/* CTA Button */}
+        <motion.div variants={itemVariants} className="flex justify-center gap-4 flex-wrap">
+          <a
+            href="#work"
+            className="px-8 py-3 border border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-background transition-all duration-300 text-sm font-mono uppercase tracking-wider"
+          >
+            View Work
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-3 bg-accent-primary text-background hover:opacity-80 transition-all duration-300 text-sm font-mono uppercase tracking-wider"
+          >
+            Get in Touch
+          </a>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <p className="text-xs font-mono text-foreground/40 mb-2">SCROLL TO EXPLORE</p>
+          <svg className="w-5 h-5 mx-auto stroke-foreground/40" fill="none" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
