@@ -19,11 +19,11 @@ const specializations: Specialization[] = [
     title: "Front-End Development",
     icon: <Code size={32} />,
     description:
-      "Specializing in creating responsive, user-friendly interfaces using modern JavaScript frameworks and design principles.",
+      "Specializing in creating responsive, performant web applications using modern JavaScript frameworks and best practices.",
     focusAreas: [
       "Responsive Web Design - Mobile-first approach, CSS media queries, Flexible layouts (Flexbox, CSS Grid)",
       "Modern JavaScript Frameworks - React component development, Next.js for SSR/SSG, State management (Hooks, Context API)",
-      "UI/UX Implementation - Design system implementation, Accessibility (WCAG), Performance optimization",
+      "Frontend Performance - Performance optimization, Code splitting, Lazy loading, Caching strategies",
       "Component Architecture - Reusable components, Component composition, Props drilling optimization",
     ],
     technologies: [

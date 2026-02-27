@@ -56,9 +56,9 @@ const skills: SkillCard[] = [
     size: "small",
   },
   {
-    id: "design",
-    title: "UI/UX & Styling",
-    description: "Tailwind CSS, Bootstrap5, Material UI, responsive design, accessibility",
+    id: "styling",
+    title: "Styling & CSS",
+    description: "Tailwind CSS, Bootstrap5, Material UI, responsive design, CSS3",
     icon: <Palette size={32} />,
     color: "accent-primary",
     size: "small",

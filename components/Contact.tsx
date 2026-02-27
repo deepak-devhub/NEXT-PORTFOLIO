@@ -28,7 +28,7 @@ const socialLinks: SocialLink[] = [
     id: "github",
     label: "GitHub",
     icon: <Github size={24} />,
-    href: "https://github.com/deepak6235",
+    href: "https://github.com/deepak-devhub",
   },
   {
     id: "twitter",
@@ -108,7 +108,7 @@ export default function Contact() {
         {/* Email CTA */}
         <motion.div variants={itemVariants} className="mb-20">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:deepakvk6334@gmail.com"
             className="inline-flex items-center justify-center px-8 sm:px-12 py-4 bg-accent-primary text-background hover:opacity-80 transition-all duration-300 text-sm sm:text-base font-mono uppercase tracking-wider hover:scale-105"
           >
             Get In Touch
