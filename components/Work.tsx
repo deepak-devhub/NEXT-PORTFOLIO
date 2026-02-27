@@ -37,22 +37,6 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "blog-application",
-    title: "Blog Application",
-    description: "Full-featured blogging platform with RBAC and content management",
-    longDescription:
-      "Powerful blogging platform built with NestJS backend and React frontend. Features complete authentication system, role-based access control (Admin, Author, Reader), advanced filtering, and search capabilities. Includes sophisticated content management with optimized MySQL queries for performance.",
-    tags: ["NestJS", "React", "MySQL", "TypeScript", "JWT", "RESTful API"],
-    image: "blog-app",
-    link: "https://github.com/deepak6235",
-    github: "https://github.com/deepak6235",
-    metrics: [
-      { label: "Posts Published", value: "500+" },
-      { label: "Active Users", value: "1K+" },
-      { label: "Avg Load Time", value: "<800ms" },
-    ],
-  },
-  {
     id: "ecommerce-platform",
     title: "E-Commerce Application",
     description: "Full-featured e-commerce platform with secure payments and responsive design",
@@ -60,12 +44,28 @@ const projects: Project[] = [
       "Complete e-commerce solution built with React frontend and Node.js/Express backend. Features user authentication, product catalog with filtering, shopping cart, secure payment integration, and admin dashboard. Designed for seamless shopping experience across all devices with MongoDB for flexible data storage.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Tailwind CSS"],
     image: "ecommerce-app",
-    link: "https://github.com/deepak6235",
-    github: "https://github.com/deepak6235",
+    link: "https://github.com/deepak-devhub/E-commerce.git",
+    github: "https://github.com/deepak-devhub",
     metrics: [
       { label: "Monthly Orders", value: "500+" },
       { label: "Product Catalog", value: "2K+" },
       { label: "Payment Success", value: "99.2%" },
+    ],
+  },
+    {
+    id: "blog-application",
+    title: "Blog Application",
+    description: "Full-featured blogging platform with RBAC and content management",
+    longDescription:
+      "Powerful blogging platform built with NestJS backend and React frontend. Features complete authentication system, role-based access control (Admin, Author, Reader), advanced filtering, and search capabilities. Includes sophisticated content management with optimized MySQL queries for performance.",
+    tags: ["NestJS", "React", "MySQL", "TypeScript", "JWT", "RESTful API"],
+    image: "blog-app",
+    link: "https://github.com/deepak-devhub/blog.git",
+    github: "https://github.com/deepak-devhub",
+    metrics: [
+      { label: "Posts Published", value: "500+" },
+      { label: "Active Users", value: "1K+" },
+      { label: "Avg Load Time", value: "<800ms" },
     ],
   },
 ];
@@ -190,7 +190,7 @@ export default function Work() {
                 </div>
 
                 {/* Metrics */}
-                {project.metrics && (
+                {/* {project.metrics && (
                   <motion.div
                     className="grid grid-cols-2 sm:grid-cols-3 gap-4"
                     initial={false}
@@ -207,7 +207,7 @@ export default function Work() {
                       </div>
                     ))}
                   </motion.div>
-                )}
+                )} */}
               </div>
             </motion.div>
           ))}

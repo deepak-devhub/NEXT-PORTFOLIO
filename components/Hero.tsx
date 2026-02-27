@@ -57,7 +57,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-xs sm:text-sm font-mono text-foreground/60 mt-12 mb-8 tracking-widest uppercase"
         >
-          Full-Stack Developer | React & Node.js Expert | UI/UX Enthusiast
+          Full-Stack Developer | React & Node.js Expert | Performance Focused
         </motion.p>
 
         {/* CTA Button */}
