@@ -135,7 +135,7 @@ export default function Education() {
                 <p className="text-base text-foreground/80 mb-6 leading-relaxed">{edu.description}</p>
 
                 {/* Coursework */}
-                <div>
+                {/* <div>
                   <h4 className="text-lg font-semibold text-foreground mb-4">Relevant Coursework:</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {edu.coursework.map((course) => (
@@ -148,7 +148,7 @@ export default function Education() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}
